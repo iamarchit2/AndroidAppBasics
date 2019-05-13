@@ -28,7 +28,7 @@ public static final String TAG = "ActivityLifeCycle";
     @Override
     protected void onPause() {
         super.onPause();
-        Log.d(TAG, "onPause: ");
+        Log.d(TAG, "onPause : ");
     }
 
     @Override
