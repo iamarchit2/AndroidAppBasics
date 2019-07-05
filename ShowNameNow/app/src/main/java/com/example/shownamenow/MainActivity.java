@@ -18,6 +18,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         button = findViewById(R.id.button);
         editText = findViewById(R.id.editText);
+        showText = findViewById(R.id.textView);
 
         button.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -25,6 +26,5 @@ public class MainActivity extends AppCompatActivity {
                 showText.setText("Hello " + editText.getText().toString());
             }
         });
-        showText = findViewById(R.id.textView);
     }
 }
