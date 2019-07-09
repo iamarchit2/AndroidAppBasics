@@ -35,12 +35,23 @@ public class MyClass {
         double remainder = (q % p);
 
         //17. ==, != operator(relation operators)
-        //17. !(negation operator)
+        //17. !(logical negation operator)
 
         //18. <, >, <=, >=(relational operators)
 
+        //19. &&, ||(logical operators)
 
-        System.out.println(remainder);
-        System.out.println("Hey, I am a Programmer." + "\nMy age is " + 23 + "."); // 10. concatenation
+        //20. for loops(initialisation, condition, increment)
+        for(int i = 0; i < 20; i++) {
+            if(i % 3 == 0) {
+                System.out.println("Hello " + i);
+            }
+        }
+
+        //21. Methods and strings parameters
+
+
+        /*System.out.println(remainder);
+        System.out.println("Hey, I am a Programmer." + "\nMy age is " + 23 + "."); // 10. concatenation*/
     }
 }
