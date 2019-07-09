@@ -59,8 +59,20 @@ public class MyClass {
         //23. return value
         System.out.println(addNumbers(12, 15));
 
+        //24. string return function type
+        double dividednumber = divideNumbers(3, 5);
+        System.out.println(dividednumber);
+
+
+
         /*System.out.println(remainder);
         System.out.println("Hey, I am a Programmer." + "\nMy age is " + 23 + "."); // 10. concatenation*/
+    }
+
+
+
+    public static double divideNumbers(double a, int b) {
+        return (a / b); //implicit casting
     }
     public static int addNumbers(int a, int b) {
         int result = a + b;
@@ -72,7 +84,10 @@ public class MyClass {
     public static void anotherMethod(String something, int age) {
         System.out.println(something + " " + age);
     }
-    public static void showName() { // Modifiers(public, static)
+    public static void showName() { // modifiers(public, static)
         System.out.println("From showName");
     }
+
+
+
 }
