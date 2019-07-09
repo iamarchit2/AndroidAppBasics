@@ -42,16 +42,37 @@ public class MyClass {
         //19. &&, ||(logical operators)
 
         //20. for loops(initialisation, condition, increment)
-        for(int i = 0; i < 20; i++) {
+        /*for(int i = 0; i < 20; i++) {
             if(i % 3 == 0) {
                 System.out.println("Hello " + i);
             }
-        }
+        }*/
 
-        //21. Methods and strings parameters
+        //21. methods(return value, arguments, body) and strings parameters
+        showName();
+        anotherMethod("Hello", 23);
 
+        // 22. function parameters - passing more than 1 parameters.
+        addNumbers(12, 15);
+        multiplyNumbers(12, 15);
+
+        //23. return value
+        System.out.println(addNumbers(12, 15));
 
         /*System.out.println(remainder);
         System.out.println("Hey, I am a Programmer." + "\nMy age is " + 23 + "."); // 10. concatenation*/
+    }
+    public static int addNumbers(int a, int b) {
+        int result = a + b;
+        return result;
+    }
+    public static void multiplyNumbers(int a, int b) {
+        System.out.println("Product is " + (a * b));
+    }
+    public static void anotherMethod(String something, int age) {
+        System.out.println(something + " " + age);
+    }
+    public static void showName() { // Modifiers(public, static)
+        System.out.println("From showName");
     }
 }
