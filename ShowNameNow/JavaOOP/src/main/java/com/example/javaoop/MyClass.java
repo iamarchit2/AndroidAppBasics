@@ -3,7 +3,7 @@ package com.example.javaoop;
 public class MyClass {
     public static void main(String[] args) {
         Microphone mic1 = new Microphone("blue yeti", "blue",122 ); //instantiate using constructor
-        // 30. constructor creates a spot in the memory
+        // constructor creates a spot in the memory
         /*mic1.model = 12254;
         mic1.color = "blue";
         mic1.name = "blue yeti";
@@ -18,5 +18,11 @@ public class MyClass {
         mic1.setVolume();
         mic1.turnOFF();
         System.out.println(mic1.showDescription());
+
+        mic1.setColor("red");
+        mic1.setName("red yeti");
+        mic1.setModel(123);
+        System.out.println(mic1.showDescription());
+
     }
 }
