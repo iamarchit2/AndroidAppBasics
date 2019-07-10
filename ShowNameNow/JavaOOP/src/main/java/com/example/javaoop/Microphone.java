@@ -14,11 +14,21 @@ public class Microphone { //modifier(public)
         this.model = model;
     }
 
+    // 32. overloading constructor
+    public Microphone() {
+
+    }
+
+    public Microphone(String name, String color) {
+        this.name = name;
+        this.color = color;
+    }
+
     //31. access modifiers, getters and setters
     public String getName() {
         return name;
     }
-
+    //comment
     public void setName(String name) {
         this.name = name;
     }

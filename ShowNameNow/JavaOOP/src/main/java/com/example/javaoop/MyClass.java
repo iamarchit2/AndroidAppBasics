@@ -24,5 +24,7 @@ public class MyClass {
         mic1.setModel(123);
         System.out.println(mic1.showDescription());
 
+        Microphone mic3 = new Microphone();
+
     }
 }
