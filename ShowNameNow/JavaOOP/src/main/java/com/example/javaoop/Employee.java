@@ -19,4 +19,9 @@ public class Employee extends Person {
     public void setAnnualSalary(double annualSalary) {
         this.annualSalary = annualSalary;
     }
+
+    @Override
+    public String toString() {
+        return this.getFirstname() + " " + this.getLastname();
+    }
 }

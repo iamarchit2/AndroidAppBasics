@@ -27,7 +27,7 @@ public class MyClass {
         Microphone mic3 = new Microphone();*/
 
 
-
+        /*// 36. inheritance structure
         Person james = new Person("james", "bond", 23);
 
         Employee jimmy = new Employee();
@@ -35,15 +35,30 @@ public class MyClass {
         jimmy.setLastname("kane");
         jimmy.setAge(22);
         jimmy.setId(12);
-        System.out.println(jimmy.getId());
+        System.out.println(jimmy);
 
         Manager manager = new Manager();
-        manager.setFirstname("Joy");
-        manager.setLastname("Bishu");
+        manager.setFirstname("joy");
+        manager.setLastname("bishu");
         manager.setAge(22);
         manager.setId(1);
         manager.setAnnualSalary(100000);
+        // 37. overriding parent class method
         System.out.println(manager.getId());
+        // 38. overriding super class method
+        System.out.println(manager);*/
+
+
+        // 39. string is an object, not a primitive
+        String myString = "Hell There";
+        boolean contains = myString.contains("her");
+        if(contains) {
+            System.out.println("Yes, the string contains her");
+        }
+        else {
+            System.out.println("No, it does not contain her");
+        }
+
 
     }
 }

@@ -11,4 +11,9 @@ public class Manager extends Employee {
     public int getId() {
         return super.getId() + 100;
     }
+
+    @Override
+    public String toString() {
+        return this.getFirstname() + " " + this.getLastname();
+    }
 }
