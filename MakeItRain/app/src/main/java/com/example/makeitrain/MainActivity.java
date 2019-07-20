@@ -2,6 +2,7 @@ package com.example.makeitrain;
 
 import androidx.appcompat.app.AppCompatActivity;
 
+import android.graphics.Color;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.View;
@@ -39,8 +40,17 @@ public class MainActivity extends AppCompatActivity {
     public void makeItRain(View v) {
         NumberFormat myFormat = NumberFormat.getCurrencyInstance();
         moneyCounter += 1000;
-        if(moneyCounter >= 10000) {
-            moneyText.setTextColor(getResources().getColor(R.color.myColour));
+        switch (moneyCounter) {
+            case 20000 :
+                moneyText.setTextColor(Color.BLACK);
+                break;
+            case 40000 :
+                moneyText.setTextColor(Color.YELLOW);
+                break;
+            case 60000 :
+                moneyText.setTextColor(Color.GREEN);
+                break;
+                default: break;
         }
         moneyText.setText(String.valueOf(myFormat.format(moneyCounter)));
         Log.d("MyTag", "onClick: Show Money" + moneyCounter);
