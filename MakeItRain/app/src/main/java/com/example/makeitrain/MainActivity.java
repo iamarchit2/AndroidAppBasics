@@ -18,12 +18,22 @@ public class MainActivity extends AppCompatActivity {
     private Button showTag;*/
     private int moneyCounter = 0;
     private TextView moneyText;
+    private Button button;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_main);
+        setContentView(R.layout.another_layout);
         moneyText = findViewById(R.id.textView_money);
+        button = findViewById(R.id.button);
+
+        button.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                Log.d("NEW BUTTON", "onClick: New Button Pressed");
+            }
+        });
+
         /*showMoney = findViewById(R.id.button_make_rain);
         showTag = findViewById(R.id.button_show_tag);*/
 
