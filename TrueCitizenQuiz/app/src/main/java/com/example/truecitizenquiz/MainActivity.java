@@ -15,6 +15,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
     private Button falseButton;
     private TextView question;
     private ImageButton nextButton;
+    private ImageButton prevButton;
     private int idx = 0;
     private Question[] questionBank = new Question[] {
             new Question(R.string.question_amendments, false), //correct: 27
@@ -38,6 +39,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         falseButton = findViewById(R.id.button_false);
         question = findViewById(R.id.textView_question);
         nextButton = findViewById(R.id.button_next);
+        prevButton = findViewById(R.id.button_prev);
 
         /*falseButton.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -56,6 +58,7 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
         falseButton.setOnClickListener(this); //register our  buttons to listen to OnClickEvents
         trueButton.setOnClickListener(this);
         nextButton.setOnClickListener(this);
+        prevButton.setOnClickListener(this);
     }
 
     @Override
@@ -71,6 +74,12 @@ public class MainActivity extends AppCompatActivity implements View.OnClickListe
                 idx++;
                 idx = idx % questionBank.length;
                 question.setText(questionBank[idx].getAnswerResID());
+                break;
+            case R.id.button_prev :
+                idx--;
+                if(idx == -1) idx = questionBank.length - 1;
+                question.setText(questionBank[idx].getAnswerResID());
+                break;
                 default: break;
         }
     }
