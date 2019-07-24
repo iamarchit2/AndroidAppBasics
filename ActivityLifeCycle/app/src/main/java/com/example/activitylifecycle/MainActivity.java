@@ -1,5 +1,6 @@
 package com.example.activitylifecycle;
 
+import androidx.annotation.Nullable;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.content.Intent;
@@ -13,6 +14,7 @@ import android.widget.Toast;
 public class MainActivity extends AppCompatActivity {
     private Button showGuess;
     private EditText guessName;
+    private final int REQUEST_CODE = 2;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -30,13 +32,21 @@ public class MainActivity extends AppCompatActivity {
                     Intent i = new Intent(MainActivity.this, ShowGuess.class);
                     i.putExtra("Name", receivedData);
                     i.putExtra("Age", 34);
-                    startActivity(i);
+                    startActivityForResult(i, REQUEST_CODE);
                 }
                 else {
                     Toast.makeText(getApplicationContext(), "Please Put Name", Toast.LENGTH_SHORT).show();
                 }
             }
         });
+    }
+
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, @Nullable Intent data) {
+        if(requestCode == REQUEST_CODE && resultCode == RESULT_OK) {
+            String message = data.getStringExtra("message");
+            Toast.makeText(getApplicationContext(), message, Toast.LENGTH_SHORT).show();
+        }
     }
 
     @Override
