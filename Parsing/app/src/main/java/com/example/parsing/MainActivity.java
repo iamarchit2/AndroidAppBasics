@@ -25,7 +25,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        requestQueue = Volley.newRequestQueue(getApplicationContext());
+        requestQueue = MySingleton.getInstance(getApplicationContext()).getRequestQueue();
 
         JsonObjectRequest jsonObjectRequest = new JsonObjectRequest(Request.Method.GET,
                 "https://jsonplaceholder.typicode.com/todos/1",
@@ -73,5 +73,6 @@ public class MainActivity extends AppCompatActivity {
         );
 
         requestQueue.add(jsonArrayRequest);
+
     }
 }
